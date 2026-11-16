@@ -1,0 +1,45 @@
+# Environment & Secrets (NEVER commit real credentials)
+.env
+.env.*
+!.env.example
+
+# Local Databases & Runtime State
+*.db
+*.sqlite
+*.sqlite3
+*.sqlite3-shm
+*.sqlite3-wal
+instance/
+logs/
+*.log
+
+# Python / uv / Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Frontend (Node.js build-time artifacts)
+node_modules/
+frontend/node_modules/
+frontend/dist/
+.vite/
+*.tsbuildinfo
+
+# Editor, OS & Local Security Harness State
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.mimosa/
+.zcode/
