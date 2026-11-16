@@ -13,15 +13,15 @@ Every phase is decomposed into small, independently testable tasks designed to f
 
 ---
 
-## Phase 1 — Backend Core Skeleton, Safety Locks & Cron Task Primitives [NEXT]
-- [ ] **Task 1.1**: Bootstrap Flask application factory (`app/__init__.py`), typed `app/config.py` with hard `TRADING_MODE=paper` safety assertions, `wsgi.py`, SQLite WAL + Flask-SQLAlchemy/Migrate setup, `.env.example`, and `/api/v1/health` endpoint + pytest suite.
-- [ ] **Task 1.2**: Implement `app/core/` utilities (`Decimal` & `RLS`/`IRT`/`USDT` unit math, UTC time, structured logging, domain exceptions, HMAC signature helpers) with unit tests.
-- [ ] **Task 1.3**: Implement SQL-backed `task_locks` & `scheduled_tasks` models, idempotent `TaskOrchestratorService`, and HMAC-protected `POST /api/v1/tasks/tick` cron endpoint with crash/lease-expiry recovery tests.
-- [ ] **Task 1.4**: Implement operator authentication blueprint (`app/blueprints/auth/`) and `audit_logs` persistence.
+## Phase 1 — Backend Core Skeleton, Safety Locks & Cron Task Primitives [COMPLETED]
+- [x] **Task 1.1**: Bootstrap Flask application factory (`app/__init__.py`), typed `app/config.py` with hard `TRADING_MODE=paper` safety assertions, `wsgi.py`, SQLite WAL + Flask-SQLAlchemy/Migrate setup, `.env.example`, and `/api/v1/health` endpoint + pytest suite.
+- [x] **Task 1.2**: Implement `app/core/` utilities (`Decimal` & `RLS`/`IRT`/`USDT` unit math, UTC time, structured logging, domain exceptions, HMAC signature helpers) with unit tests.
+- [x] **Task 1.3**: Implement SQL-backed `task_locks` & `scheduled_tasks` models, idempotent `TaskOrchestratorService`, and HMAC-protected `POST /api/v1/tasks/tick` cron endpoint with crash/lease-expiry recovery tests.
+- [x] **Task 1.4**: Implement operator authentication blueprint (`app/blueprints/auth/`) and `audit_logs` persistence.
 
 ---
 
-## Phase 2 — Frontend Bootstrap & `SOLID-GLASS` Design System Kit
+## Phase 2 — Frontend Bootstrap & `SOLID-GLASS` Design System Kit [NEXT]
 - [ ] **Task 2.1**: Initialize `frontend/` (Vite + React + TypeScript strict + Tailwind CSS + Recharts) configured to build static output into `app/static/spa/`, plus Flask SPA static-serving route and build smoke test.
 - [ ] **Task 2.2**: Implement `SOLID-GLASS` design tokens (`#FFFFFF`, `#0A0A0B`, `#FF5500`, `JetBrains Mono` tabular numerals) and core reusable UI primitives (`SolidCard`, `GlassPanel`, `ActionButton`, `StatusBadge`, `DataGridTable`, `MetricStatTile`, `DrawerInspector`).
 - [ ] **Task 2.3**: Build the responsive institutional shell (Collapsible Sidebar with persistent `PAPER TRADING ONLY` lock emblem, Sticky Glass Top Bar, visibility-aware REST polling hook, empty/loading/error states).
